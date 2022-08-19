@@ -4,9 +4,16 @@
 //pages
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
 
 //styled components
 import { StyledContainer } from './components/Styles';
+
+// react loader spinner
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+//import { Loader } from  'react-loader-spinner';
 
 import {
   BrowserRouter as Router,
@@ -18,8 +25,8 @@ function App() {
   return (
     <Router>
     <StyledContainer>
-
-      <Login></Login>
+    
+     <Dashboard></Dashboard>
 
     </StyledContainer>
     </Router>
