@@ -26,8 +26,26 @@ function App() {
     <Router>
     <StyledContainer>
     
-     <Dashboard></Dashboard>
+     <Switch>
+      <Route path ="/signup">
+        <Signup />
+      </Route>
 
+      <Route path ="/login">
+        <Login />
+      </Route>
+
+      <Route path ="/dashboard">
+        <Dashboard />
+      </Route>
+
+      <Route path ="/">
+        <Home />
+      </Route>
+
+     </Switch>  
+
+    {/* <Login />  */}
     </StyledContainer>
     </Router>
   );
