@@ -1,4 +1,5 @@
-import { StyledTitle, StyledSubTitle, Avatar , StyledButton , ButtonGroup , StyledFormArea ,colors } from "../components/Styles";
+import { StyledTitle, StyledSubTitle, Avatar , StyledButton , ButtonGroup , 
+    StyledFormArea ,colors } from "../components/Styles";
 
 
 //logo 

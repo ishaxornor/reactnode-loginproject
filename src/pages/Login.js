@@ -19,7 +19,13 @@ import { useParams } from 'react-router-dom';
 //import Loader from 'react-loader-spinner';
 //import { Audio } from  'react-loader-spinner';
 
-const Login = () => {
+//auth and redux 
+import { connect } from 'react-redux';
+import { loginUser } from '../auth/actions/userActions';
+import { useHistory } from 'react-router-dom';
+
+const Login = ({loginUser}) => {
+        const history = useHistory();
     return (
         <div>
             <StyledFormArea>
@@ -43,8 +49,9 @@ const Login = () => {
                         })
                     }
 
-                    onSubmit={(values , {setSubmitting}) => {
+                    onSubmit={(values , {setSubmitting , setFieldError}) => {
                         console.log(values);
+                        loginUser(values , history , setFieldError , setSubmitting);
                     }} 
                 >
                     {({isSubmitting}) => (
@@ -98,4 +105,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default connect(null , {loginUser})(Login);
